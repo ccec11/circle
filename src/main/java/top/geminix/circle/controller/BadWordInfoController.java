@@ -25,26 +25,19 @@ public class BadWordInfoController {
     public ModelAndView findAllBadWord() {
         ModelAndView mv = new ModelAndView();
         List<BadWordInfo> allBadWord = badWordInfoService.findAll();
-        for (BadWordInfo badWordInfo : allBadWord) {
-            System.out.println("===========");
-            System.out.println(badWordInfo);
-        }
-
-//        mv.addObject("allBadWord",allBadWord);
-//        mv.setViewName("");
-        return null;
+        mv.addObject("allBadWord",allBadWord);
+        //交给试图解析器完成
+        mv.setViewName("");
+        return mv;
     }
 
 
     @RequestMapping("add.do")
     public String addBadWordInfo(@RequestParam(name = "badWordContent")String badWordContent) {
-
         boolean addResult = badWordInfoService.addBadWordInfo(badWordContent);
         System.out.println(addResult);
 
-//        return "redirect:findAll.do";
-        return null;
-
+        return "redirect:findAll.do";
     }
 
     @RequestMapping("remove.do")

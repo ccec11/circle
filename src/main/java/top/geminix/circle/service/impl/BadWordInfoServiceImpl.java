@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class BadWordInfoService implements IBadWordInfoService {
+public class BadWordInfoServiceImpl implements IBadWordInfoService {
 
     @Autowired
     private IBadWordInfoDao badWordInfoDao;

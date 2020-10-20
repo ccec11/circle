@@ -62,7 +62,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
+            <version>1.16.10</version>
+            <!--<version>1.18.12出错</version>-->
         </dependency>
         <!-- spring -->
         <dependency>
@@ -214,11 +215,6 @@
             <groupId>javax.annotation</groupId>
             <artifactId>jsr250-api</artifactId>
             <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13</version>
         </dependency>
 
     </dependencies>

@@ -8,7 +8,7 @@ import top.geminix.circle.service.IAdminInfoService;
 
 @Service
 //@Transactional
-public class AdminInfoService implements IAdminInfoService {
+public class AdminInfoServiceImpl implements IAdminInfoService {
     @Autowired
     private IAdminInfoDao adminInfoDao;
 
