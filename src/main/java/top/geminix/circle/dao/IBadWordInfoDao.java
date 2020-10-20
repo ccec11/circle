@@ -12,7 +12,7 @@ public interface IBadWordInfoDao {
 
 
     @Select("SELECT * FROM badWordInfo")
-    List<BadWordInfo> findAll();
+    List<BadWordInfo> getAllBadWord();
 
     @Insert("INSERT INTO badWordInfo values(null,#{badWordContent})")
     boolean addBadWordInfo(@Param("badWordContent") String badWordContent);

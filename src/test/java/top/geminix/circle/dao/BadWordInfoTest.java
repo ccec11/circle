@@ -19,7 +19,7 @@ public class BadWordInfoTest {
 
     @Test
     public void TestGetAll() {
-        List<BadWordInfo> all = badWordInfoService.findAll();
+        List<BadWordInfo> all = badWordInfoService.getAllBadWord();
         for (BadWordInfo badWordInfo : all) {
             System.out.println(badWordInfo);
         }
@@ -28,7 +28,7 @@ public class BadWordInfoTest {
 
     @Test
     public void TestAdd() {
-        String bad = "badTestAdd";
+        String bad = "badTest2";//字符太长会报错
         boolean b = badWordInfoService.addBadWordInfo(bad);
         System.out.println("===============");
         TestGetAll();
@@ -37,7 +37,7 @@ public class BadWordInfoTest {
 
     @Test
     public void TestRemove() {
-        String wordId = "5";
+        String wordId = "7";
         boolean result = badWordInfoService.removeBadWordInfo(wordId);
         System.out.println("==============="+result);
         TestGetAll();

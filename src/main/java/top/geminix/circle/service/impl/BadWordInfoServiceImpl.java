@@ -21,8 +21,8 @@ public class BadWordInfoServiceImpl implements IBadWordInfoService {
      * @return
      */
     @Override
-    public List<BadWordInfo> findAll() {
-        return badWordInfoDao.findAll();
+    public List<BadWordInfo> getAllBadWord() {
+        return badWordInfoDao.getAllBadWord();
     }
 
     @Override

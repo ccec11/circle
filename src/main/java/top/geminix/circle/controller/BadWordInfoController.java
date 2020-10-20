@@ -21,10 +21,10 @@ public class BadWordInfoController {
     private IBadWordInfoService badWordInfoService;
 
 
-    @RequestMapping("findAll.do")
-    public ModelAndView findAllBadWord() {
+    @RequestMapping("getAll.do")
+    public ModelAndView getAllBadWord() {
         ModelAndView mv = new ModelAndView();
-        List<BadWordInfo> allBadWord = badWordInfoService.findAll();
+        List<BadWordInfo> allBadWord = badWordInfoService.getAllBadWord();
         mv.addObject("allBadWord",allBadWord);
         //交给试图解析器完成
         mv.setViewName("");
@@ -37,7 +37,7 @@ public class BadWordInfoController {
         boolean addResult = badWordInfoService.addBadWordInfo(badWordContent);
         System.out.println(addResult);
 
-        return "redirect:findAll.do";
+        return "redirect:getAllBadWord.do";
     }
 
     @RequestMapping("remove.do")
@@ -46,19 +46,7 @@ public class BadWordInfoController {
         boolean removeResult = badWordInfoService.removeBadWordInfo(badWordId);
         System.out.println(removeResult);
 
-//        return "redirect:findAll.do";
-        return null;
-
-    }
-
-    @RequestMapping("modify.do")
-    public String modifyBadWordInfo() {
-
-
-
-//        return "redirect:findAll.do";
-        return null;
-
+        return "redirect:getAllBadWord.do";
     }
 
 

@@ -18,10 +18,11 @@ public class CircleInfo {
 
     private int circleStatus;//封禁圈子 状态 0=待审核   1=正常  -1=已封禁
     private String circleStatusStr;
-
-    private String circleHeat;//圈子热度 暂不定义
-    private UserInfo userInfo;//申请人 哪个用户？把id传进来
     private LabelInfo labelInfo;
+
+    //    private String circleHeat;//圈子热度
+    //    private QuestionInfo questionInfo //题目信息
+    private UserInfo userInfo;//圈主 传id
 
 
 }

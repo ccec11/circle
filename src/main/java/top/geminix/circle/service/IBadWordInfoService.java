@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IBadWordInfoService {
 
-    List<BadWordInfo> findAll();
+    List<BadWordInfo> getAllBadWord();
 
     boolean addBadWordInfo(String badWordContent);
 
